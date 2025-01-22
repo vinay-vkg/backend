@@ -7,6 +7,22 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+const person = {
+  name: "John Doe",
+  age: 30,
+  email: "john.doe@example.com",
+  isActive: true,
+  friends: ["Jane", "Alex", "Emily"],
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    zip: "10001",
+  },
+};
+app.get("/person", (req, res) => {
+  res.json(person);
+});
+
 app.get("/twiter", (req, res) => {
   res.send("vinay kumar");
 });
